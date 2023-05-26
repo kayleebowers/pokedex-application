@@ -21,8 +21,14 @@ let anne = {
   }
 };
 
+delete anne.age;
+
 anne.name = 'Cool Anne';
 anne.child.age[0] = 10;
+anne.favFood = 'pineapple';
 
 console.log(anne.name);
+console.log(anne.favFood);
 console.log(anne.child.age[0]);
+
+console.log(anne);
