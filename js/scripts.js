@@ -32,3 +32,19 @@ console.log(anne.favFood);
 console.log(anne.child.age[0]);
 
 console.log(anne);
+
+
+let newbie = 'sam';
+
+  let userAges = {
+    anne: 27,
+    sam: 112,
+    megan: 97
+  };
+
+  userAges.newbie = 'helen';
+  userAges.age = 23;
+
+  userAges[newbie] = 17;
+  console.log(userAges.age);
+  console.log(userAges[newbie]);
