@@ -1,44 +1,44 @@
 //pokemon data
 let pokemonList = [
-  ivysaur = {
+  (ivysaur = {
     name: "Ivysaur",
     height: 3.03,
     types: ["grass", "poison"],
-    id: 2
-  },
+    id: 2,
+  }),
 
-  butterfree = {
+  (butterfree = {
     name: "Butterfree",
     height: 3.07,
     types: ["bug", "flying"],
-    id: 12
-  },
+    id: 12,
+  }),
 
-  ninetales = {
+  (ninetales = {
     name: "Ninetales",
     height: 3.07,
     types: ["fire"],
-    id: 38
-  },
+    id: 38,
+  }),
 
-  squirtle = {
+  (squirtle = {
     name: "Squirtle",
     height: 1.08,
-    types: ["water"], 
-    id: 7
-  },
+    types: ["water"],
+    id: 7,
+  }),
 
-  raichu = {
+  (raichu = {
     name: "Raichu",
     height: 2.07,
-    types: ["electric"], 
-    id: 26
-  },
+    types: ["electric"],
+    id: 26,
+  }),
 
-  jigglypuff = {
+  (jigglypuff = {
     name: "Jigglypuff",
     height: 1.08,
-    types: ["normal", "fairy"], 
-    id: 39
-  }
+    types: ["normal", "fairy"],
+    id: 39,
+  }),
 ];
