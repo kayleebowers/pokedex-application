@@ -26,14 +26,14 @@ let pokemonList = [
     height: 1.08,
     types: ["water"], 
     id: 7
-  }
+  },
 
   raichu = {
     name: "Raichu",
     height: 2.07,
     types: ["electric"], 
     id: 26
-  }
+  },
 
   jigglypuff = {
     name: "Jigglypuff",
