@@ -11,11 +11,15 @@ header {
     height: 100px;
     width: 100%;
     background-color: #e8e8e8;
+    display: flex;
+    justify-content: center;
 }
 
 #svg2 {
-    width: 20%;
-    display: inline-block;
+    height: 130%;
+    position: relative;
+    width: 80px;
+    top: -5px;
 }
 
 /* pokemon list */
