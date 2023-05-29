@@ -13,6 +13,11 @@ header {
     background-color: #e8e8e8;
 }
 
+#svg2 {
+    width: 20%;
+    display: inline-block;
+}
+
 /* pokemon list */
 
 .pokemon {
