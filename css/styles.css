@@ -9,8 +9,8 @@ html, body {
 /* header */
 header {
     height: 100px;
-    border: 1px solid black;
     width: 100%;
+    background-color: #e8e8e8;
 }
 
 /* pokemon list */
