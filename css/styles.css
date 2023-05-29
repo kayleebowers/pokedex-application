@@ -6,6 +6,11 @@ html, body {
     margin: 0;
 }
 
+body {
+    position: relative;
+    top: 100px;
+}
+
 /* header */
 header {
     height: 100px;
