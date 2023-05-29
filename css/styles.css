@@ -22,6 +22,10 @@ header {
     top: 0;
 }
 
+.pokemon-logo {
+    padding: 10px 0;
+}
+
 #pokeball {
     height: 130%;
     position: relative;
