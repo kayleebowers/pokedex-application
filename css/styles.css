@@ -13,6 +13,8 @@ header {
     background-color: #e8e8e8;
     display: flex;
     justify-content: center;
+    position: fixed;
+    top: 0;
 }
 
 #svg2 {
