@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+.pokemon {
+    border: 1px solid black;
+    width: 30%;
+    text-align: center;
+}
