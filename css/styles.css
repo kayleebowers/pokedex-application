@@ -58,3 +58,11 @@ p {
   text-align: center;
   margin: 10px;
 }
+
+/* media queries */
+@media all and (max-width: 500px) {
+    .pokemon {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
