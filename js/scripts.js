@@ -42,3 +42,8 @@ let pokemonList = [
     id: 39,
   },
 ];
+
+//write pokemon names and heights in document
+for (let i = 0; i < pokemonList.length; i++) {
+  document.write(`<p> ${pokemonList[i].name} (height: ${pokemonList[i].height})</p>`);
+}
