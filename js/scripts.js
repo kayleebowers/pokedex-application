@@ -60,6 +60,23 @@ let pokemonRepository = (function () {
     }
   }
 
+  function addListItem(pokemon) {
+    let pokemonPageList = document.querySelector('.pokemon-list');
+
+    //add list item
+    let pageListItem = document.createElement('li');
+    pageListItem.classList.add('pokemonList__item');
+
+    //add pokemon button
+    let button = document.createElement('button');
+    button.innerText = pokemon.name
+    button.classList.add('pokemon__name');
+
+    //append new elements
+    pokemonPageList.appendChild(pageListItem);
+    pageListItem.appendChild(button);
+  }
+
   //attempts at bonus filter task
 
   // function findName(pokemon, name) {
@@ -88,6 +105,7 @@ let pokemonRepository = (function () {
   return {
     getAll,
     add,
+    addListItem
     // findName
   };
 })();
@@ -100,20 +118,7 @@ pokemonRepository.add({name: 'Weedle', height: 1.0, types: ['bug', 'poison'], id
 
 //write pokemon names and heights in document
 pokemonRepository.getAll().forEach(function (pokemon) {
-  let pokemonPageList = document.querySelector('.pokemon-list');
-
-  //add list item
-  let pageListItem = document.createElement('li');
-  pageListItem.classList.add('pokemonList__item');
-
-  //add pokemon button
-  let button = document.createElement('button');
-  button.innerText = pokemon.name
-  button.classList.add('pokemon__name');
-
-  //append new elements
-  pokemonPageList.appendChild(pageListItem);
-  pageListItem.appendChild(button);
+  
 });
 
 //forEach loop before Exercise 1.6 (for earlier task reference)
