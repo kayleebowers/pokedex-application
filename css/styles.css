@@ -54,10 +54,11 @@ h2 {
 }
 
 .pokemonList__item {
-  width: 30%;
+  width: 80vw;
   text-align: center;
-  margin: 10px;
+  margin: 10px auto;
   border: 1px solid black;
+  padding: 30px 0px;
 }
 
 .pokemon__name {
