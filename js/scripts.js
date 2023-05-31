@@ -1,6 +1,6 @@
 //pokemon data
 let pokemonRepository = (function() {
-  [
+  let pokemonList = [
     {
       name: "Ivysaur",
       height: 3.03,
@@ -43,6 +43,23 @@ let pokemonRepository = (function() {
       id: 39,
     },
   ];
+
+  //IIFE functions 
+
+  function getAll() {
+    return pokemonList;
+  }
+
+  function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
+
+  //return value of IIFE
+  return {
+    getAll,
+    add
+  };
+
 })();
 
 //write pokemon names and heights in document
