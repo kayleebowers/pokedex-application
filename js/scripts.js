@@ -59,11 +59,10 @@ let pokemonRepository = (function() {
     getAll,
     add
   };
-
 })();
 
 //write pokemon names and heights in document
-pokemonList.forEach(function(pokemon) {
+pokemonRepository.getAll().forEach(function(pokemon) {
   if (pokemon.height < 3.07) {
       document.write(
         `<div class="pokemon"><h2 class="pokemon__name">${pokemon.name}</h2> <p class="pokemon__height">Height: ${pokemon.height}</p></div>`
