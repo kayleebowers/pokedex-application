@@ -61,6 +61,9 @@ let pokemonRepository = (function () {
   };
 })();
 
+//add charizard
+pokemonRepository.add({name: "Charizard", height: 5.07, types: ["flame"], id: 6});
+
 //write pokemon names and heights in document
 pokemonRepository.getAll().forEach(function (pokemon) {
   if (pokemon.height < 3.07) {
