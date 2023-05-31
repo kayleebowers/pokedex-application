@@ -117,8 +117,6 @@ pokemonRepository.getAll().forEach(function (pokemon) {
   pageListItem.appendChild(button);
 });
 
-
-
 //forEach loop before Exercise 1.6 (for earlier task reference)
 
 // pokemonRepository.getAll().forEach(function (pokemon) {
