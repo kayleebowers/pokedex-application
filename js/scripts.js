@@ -44,16 +44,14 @@ let pokemonList = [
 ];
 
 //write pokemon names and heights in document
-for (let i = 0; i < pokemonList.length; i++) {
-  //normal pokemon size
-  if (pokemonList[i].height < 3.07) {
-    document.write(
-      `<div class="pokemon"><h2 class="pokemon__name">${pokemonList[i].name}</h2> <p class="pokemon__height">Height: ${pokemonList[i].height}</p></div>`
-    );
-    //add note for biggest pokemon
-  } else {
-    document.write(
-      `<div class="pokemon"><h2 class="pokemon__name">${pokemonList[i].name}</h2> <p class="pokemon__height--big">Height: ${pokemonList[i].height} — Wow, that's big!</p></div>`
-    );
-  }
-}
+pokemonList.forEach(function(pokemon) {
+  if (pokemon.height < 3.07) {
+      document.write(
+        `<div class="pokemon"><h2 class="pokemon__name">${pokemon.name}</h2> <p class="pokemon__height">Height: ${pokemon.height}</p></div>`
+      );
+      //add note for biggest pokemon
+    } else {
+      document.write(
+        `<div class="pokemon"><h2 class="pokemon__name">${pokemon.name}</h2> <p class="pokemon__height--big">Height: ${pokemon.height} — Wow, that's big!</p></div>`
+      )}
+});
