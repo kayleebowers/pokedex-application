@@ -60,6 +60,20 @@ let pokemonRepository = (function () {
     }
   }
 
+  //attempts at bonus filter task
+
+  // function findName(pokemon, name) {
+  //   pokemon.forEach(function(index) {
+  //     pokemon.filter(function (inputName) {
+  //       if (inputName === pokemon[index].name) {
+  //         console.log(inputName);
+  //       } else {
+  //         return 'Pokemon not found';
+  //       }
+  //     })
+  //   })
+  //   };
+  
   // function findName(name) {
   //   let results = pokemonList.filter(function(name) {
   //     if (name === pokemonList.name) {
@@ -82,7 +96,7 @@ let pokemonRepository = (function () {
 pokemonRepository.add({name: 'Charizard', height: 5.07, types: ['flame'], id: 6});
 pokemonRepository.add({name: 'Weedle', height: 1.0, types: ['bug', 'poison'], id: 13});
 
-// console.log(pokemonRepository.findName('Weedle'));
+// console.log(pokemonRepository.findName(pokemonRepository.getAll(), 'Weedle'));
 
 //write pokemon names and heights in document
 pokemonRepository.getAll().forEach(function (pokemon) {
