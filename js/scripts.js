@@ -101,7 +101,6 @@ pokemonRepository.add({name: 'Weedle', height: 1.0, types: ['bug', 'poison'], id
 //write pokemon names and heights in document
 pokemonRepository.getAll().forEach(function (pokemon) {
   let pokemonPageList = document.querySelector('.pokemon-list');
-  pokemonPageList.classList.add('pokemonList');
 
   //add list item
   let pageListItem = document.createElement('li');
