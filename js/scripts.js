@@ -57,19 +57,32 @@ let pokemonRepository = (function () {
       return 'Object needs name, height, types, id';
     } else {
       return 'Not an object';
+    }
   }
-}
+
+  // function findName(name) {
+  //   let results = pokemonList.filter(function(name) {
+  //     if (name === pokemonList.name) {
+  //       return name;
+  //   } else {
+  //     return 'Pokemon not found';
+  //   }
+  //   });
+  // }
 
   //return value of IIFE
   return {
     getAll,
     add,
+    findName
   };
 })();
 
 //add pokemon to repository
 pokemonRepository.add({name: 'Charizard', height: 5.07, types: ['flame'], id: 6});
 pokemonRepository.add({name: 'Weedle', height: 1.0, types: ['bug', 'poison'], id: 13});
+
+// console.log(pokemonRepository.findName('Weedle'));
 
 //write pokemon names and heights in document
 pokemonRepository.getAll().forEach(function (pokemon) {
