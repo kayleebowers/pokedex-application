@@ -51,8 +51,12 @@ let pokemonRepository = (function () {
   }
 
   function add(pokemon) {
-    pokemonList.push(pokemon);
+    if (typeof pokemon === 'object') {
+      pokemonList.push(pokemon);
+    } else {
+      return 'Not an object';
   }
+}
 
   //return value of IIFE
   return {
