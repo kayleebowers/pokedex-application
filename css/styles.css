@@ -75,8 +75,7 @@ h2 {
 
 /* media queries */
 @media all and (max-width: 500px) {
-  .pokemonList__item  {
-    width: 80%;
-    margin: 0 auto;
+  .pokemon__name  {
+    font-size: 14px;
   }
 }
