@@ -46,10 +46,12 @@ let pokemonRepository = (function () {
 
   //IIFE functions
 
+  //get full list of pokemon
   function getAll() {
     return pokemonList;
   }
 
+  //add new pokemon to list
   function add(pokemon) {
     if (typeof pokemon === 'object' && Object.keys(pokemon).length === 4) {
       pokemonList.push(pokemon);
@@ -60,6 +62,7 @@ let pokemonRepository = (function () {
     }
   }
 
+  //add pokemon HTML to webpage
   function addListItem(pokemon) {
     let pokemonPageList = document.querySelector('.pokemon-list');
 
@@ -118,7 +121,7 @@ pokemonRepository.add({name: 'Weedle', height: 1.0, types: ['bug', 'poison'], id
 
 //write pokemon names and heights in document
 pokemonRepository.getAll().forEach(function (pokemon) {
-  
+  pokemonRepository.addListItem(pokemon);
 });
 
 //forEach loop before Exercise 1.6 (for earlier task reference)
