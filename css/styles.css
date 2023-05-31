@@ -47,21 +47,29 @@ h2 {
   font-size: 18px;
 }
 
-p {
-  font-size: 16px;
-}
 /* pokemon list */
 
-.pokemon {
-  border: 1px solid black;
+.pokemonList {
+  list-style-type: none;
+}
+
+.pokemonList__item {
   width: 30%;
   text-align: center;
   margin: 10px;
+  border: 1px solid black;
+}
+
+.pokemon__name {
+  font-size: 16px;
+  border: none;
+  background: none;
+  font-family: "Press Start 2P", cursive;
 }
 
 /* media queries */
 @media all and (max-width: 500px) {
-  .pokemon {
+  .pokemonList__item  {
     width: 80%;
     margin: 0 auto;
   }
