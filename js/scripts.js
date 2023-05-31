@@ -100,14 +100,34 @@ pokemonRepository.add({name: 'Weedle', height: 1.0, types: ['bug', 'poison'], id
 
 //write pokemon names and heights in document
 pokemonRepository.getAll().forEach(function (pokemon) {
-  if (pokemon.height < 3.07) {
-    document.write(
-      `<div class="pokemon"><h2 class="pokemon__name">${pokemon.name}</h2> <p class="pokemon__height">Height: ${pokemon.height}</p></div>`
-    );
-    //add note for biggest pokemon
-  } else {
-    document.write(
-      `<div class="pokemon"><h2 class="pokemon__name">${pokemon.name}</h2> <p class="pokemon__height--big">Height: ${pokemon.height} — Wow, that's big!</p></div>`
-    );
-  }
+  let pokemonPageList = document.querySelector('.pokemon-list');
+
+  //add list item
+  let pageListItem = document.createElement('li');
+
+  //add pokemon button
+  let button = document.createElement('button');
+  button.innerText = pokemon.name
+  button.classList.add('pokemon__name');
+
+  //append new elements
+  pokemonPageList.appendChild(pageListItem);
+  pageListItem.appendChild(button);
 });
+
+
+
+//forEach loop before Exercise 1.6 (for earlier task reference)
+
+// pokemonRepository.getAll().forEach(function (pokemon) {
+//   if (pokemon.height < 3.07) {
+//     document.write(
+//       `<div class="pokemon"><h2 class="pokemon__name">${pokemon.name}</h2> <p class="pokemon__height">Height: ${pokemon.height}</p></div>`
+//     );
+//     //add note for biggest pokemon
+//   } else {
+//     document.write(
+//       `<div class="pokemon"><h2 class="pokemon__name">${pokemon.name}</h2> <p class="pokemon__height--big">Height: ${pokemon.height} — Wow, that's big!</p></div>`
+//     );
+//   }
+// });
