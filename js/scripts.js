@@ -1,5 +1,5 @@
 //pokemon data
-let pokemonRepository = (function() {
+let pokemonRepository = (function () {
   let pokemonList = [
     {
       name: "Ivysaur",
@@ -44,7 +44,7 @@ let pokemonRepository = (function() {
     },
   ];
 
-  //IIFE functions 
+  //IIFE functions
 
   function getAll() {
     return pokemonList;
@@ -57,19 +57,20 @@ let pokemonRepository = (function() {
   //return value of IIFE
   return {
     getAll,
-    add
+    add,
   };
 })();
 
 //write pokemon names and heights in document
-pokemonRepository.getAll().forEach(function(pokemon) {
+pokemonRepository.getAll().forEach(function (pokemon) {
   if (pokemon.height < 3.07) {
-      document.write(
-        `<div class="pokemon"><h2 class="pokemon__name">${pokemon.name}</h2> <p class="pokemon__height">Height: ${pokemon.height}</p></div>`
-      );
-      //add note for biggest pokemon
-    } else {
-      document.write(
-        `<div class="pokemon"><h2 class="pokemon__name">${pokemon.name}</h2> <p class="pokemon__height--big">Height: ${pokemon.height} — Wow, that's big!</p></div>`
-      )}
+    document.write(
+      `<div class="pokemon"><h2 class="pokemon__name">${pokemon.name}</h2> <p class="pokemon__height">Height: ${pokemon.height}</p></div>`
+    );
+    //add note for biggest pokemon
+  } else {
+    document.write(
+      `<div class="pokemon"><h2 class="pokemon__name">${pokemon.name}</h2> <p class="pokemon__height--big">Height: ${pokemon.height} — Wow, that's big!</p></div>`
+    );
+  }
 });
