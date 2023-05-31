@@ -74,7 +74,7 @@ let pokemonRepository = (function () {
   return {
     getAll,
     add,
-    findName
+    // findName
   };
 })();
 
