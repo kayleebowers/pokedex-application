@@ -69,6 +69,10 @@ h2 {
   font-family: "Press Start 2P", cursive;
 }
 
+.pokemon__name:hover {
+  cursor: pointer;
+}
+
 /* media queries */
 @media all and (max-width: 500px) {
   .pokemonList__item  {
