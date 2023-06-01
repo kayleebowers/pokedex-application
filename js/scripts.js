@@ -79,15 +79,20 @@ let pokemonRepository = (function () {
     pokemonPageList.appendChild(pageListItem);
     pageListItem.appendChild(button);
 
-    //button event listener
-    button.addEventListener('click', function () {
-      showDetails(pokemon)
-    });
+    //add event listener
+    addButtonEventListener(button, pokemon);
   }
 
   //event handler
   function showDetails(pokemon) {
     console.log(pokemon.name);
+  }
+
+  //function to call button event listener
+  function addButtonEventListener (button, pokemon) {
+    button.addEventListener('click', function () {
+      showDetails(pokemon)
+    });
   }
 
   //attempts at bonus filter task
