@@ -1,48 +1,7 @@
 //pokemon data
 let pokemonRepository = (function () {
-  let pokemonList = [
-    {
-      name: "Ivysaur",
-      height: 3.03,
-      types: ["grass", "poison"],
-      id: 2,
-    },
-
-    {
-      name: "Butterfree",
-      height: 3.06,
-      types: ["bug", "flying"],
-      id: 12,
-    },
-
-    {
-      name: "Ninetales",
-      height: 3.07,
-      types: ["fire"],
-      id: 38,
-    },
-
-    {
-      name: "Squirtle",
-      height: 1.08,
-      types: ["water"],
-      id: 7,
-    },
-
-    {
-      name: "Raichu",
-      height: 2.07,
-      types: ["electric"],
-      id: 26,
-    },
-
-    {
-      name: "Jigglypuff",
-      height: 1.08,
-      types: ["normal", "fairy"],
-      id: 39,
-    },
-  ];
+  let pokemonList = [];
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   //IIFE functions
 
@@ -98,6 +57,23 @@ let pokemonRepository = (function () {
     });
   }
 
+  //api functions
+  function loadList() {
+    return fetch(apiUrl).then(function(response) {
+      return response.json(); 
+    }).then(function(json) {
+      return json.results.forEach(function(item) {
+        let pokemon = {
+          name: item.name,
+          detailsUrl: item.url
+        };
+        add(pokemon);
+      });
+    }).catch(function(e) {
+      console.error(e);
+    })
+  }
+
   //attempts at bonus filter task
 
   // function findName(pokemon, name) {
@@ -128,30 +104,20 @@ let pokemonRepository = (function () {
     add,
     addListItem,
     showDetails,
+    loadList
     // findName
   };
 })();
 
-//add pokemon to repository
-pokemonRepository.add({
-  name: "Charizard",
-  height: 5.07,
-  types: ["flame"],
-  id: 6,
-});
-pokemonRepository.add({
-  name: "Weedle",
-  height: 1.0,
-  types: ["bug", "poison"],
-  id: 13,
-});
+pokemonRepository.loadList().then(function() {
+  //data is loaded
+  pokemonRepository.getAll().forEach(function (pokemon) {
+    pokemonRepository.addListItem(pokemon);
+  });
+})
 
 // console.log(pokemonRepository.findName(pokemonRepository.getAll(), 'Weedle'));
 
-//write pokemon names and heights in document
-pokemonRepository.getAll().forEach(function (pokemon) {
-  pokemonRepository.addListItem(pokemon);
-});
 
 //forEach loop before Exercise 1.6 (for earlier task reference)
 
