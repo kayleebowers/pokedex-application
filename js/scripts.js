@@ -78,6 +78,14 @@ let pokemonRepository = (function () {
     //append new elements
     pokemonPageList.appendChild(pageListItem);
     pageListItem.appendChild(button);
+
+    //button event listener
+    button.addEventListener('click', showDetails(pokemon));
+  }
+
+  //event handler
+  function showDetails(pokemon) {
+    console.log(pokemon);
   }
 
   //attempts at bonus filter task
@@ -108,7 +116,8 @@ let pokemonRepository = (function () {
   return {
     getAll,
     add,
-    addListItem
+    addListItem,
+    showDetails
     // findName
   };
 })();
