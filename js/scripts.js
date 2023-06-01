@@ -80,12 +80,14 @@ let pokemonRepository = (function () {
     pageListItem.appendChild(button);
 
     //button event listener
-    button.addEventListener('click', showDetails(pokemon));
+    button.addEventListener('click', function () {
+      showDetails(pokemon)
+    });
   }
 
   //event handler
   function showDetails(pokemon) {
-    console.log(pokemon);
+    console.log(pokemon.name);
   }
 
   //attempts at bonus filter task
