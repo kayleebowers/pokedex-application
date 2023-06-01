@@ -53,27 +53,30 @@ let pokemonRepository = (function () {
 
   //add new pokemon to list
   function add(pokemon) {
-    if (typeof pokemon === 'object' && Object.keys(pokemon).length === 4) {
+    if (typeof pokemon === "object" && Object.keys(pokemon).length === 4) {
       pokemonList.push(pokemon);
-    } else if (Object.keys(pokemon).length < 4 || Object.keys(pokemon).length > 4) {
-      return 'Object needs name, height, types, id';
+    } else if (
+      Object.keys(pokemon).length < 4 ||
+      Object.keys(pokemon).length > 4
+    ) {
+      return "Object needs name, height, types, id";
     } else {
-      return 'Not an object';
+      return "Not an object";
     }
   }
 
   //add pokemon HTML to webpage
   function addListItem(pokemon) {
-    let pokemonPageList = document.querySelector('.pokemon-list');
+    let pokemonPageList = document.querySelector(".pokemon-list");
 
     //add list item
-    let pageListItem = document.createElement('li');
-    pageListItem.classList.add('pokemonList__item');
+    let pageListItem = document.createElement("li");
+    pageListItem.classList.add("pokemonList__item");
 
     //add pokemon button
-    let button = document.createElement('button');
-    button.innerText = pokemon.name
-    button.classList.add('pokemon__name');
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("pokemon__name");
 
     //append new elements
     pokemonPageList.appendChild(pageListItem);
@@ -89,9 +92,9 @@ let pokemonRepository = (function () {
   }
 
   //function to call button event listener
-  function addButtonEventListener (button, pokemon) {
-    button.addEventListener('click', function () {
-      showDetails(pokemon)
+  function addButtonEventListener(button, pokemon) {
+    button.addEventListener("click", function () {
+      showDetails(pokemon);
     });
   }
 
@@ -108,7 +111,7 @@ let pokemonRepository = (function () {
   //     })
   //   })
   //   };
-  
+
   // function findName(name) {
   //   let results = pokemonList.filter(function(name) {
   //     if (name === pokemonList.name) {
@@ -124,14 +127,24 @@ let pokemonRepository = (function () {
     getAll,
     add,
     addListItem,
-    showDetails
+    showDetails,
     // findName
   };
 })();
 
 //add pokemon to repository
-pokemonRepository.add({name: 'Charizard', height: 5.07, types: ['flame'], id: 6});
-pokemonRepository.add({name: 'Weedle', height: 1.0, types: ['bug', 'poison'], id: 13});
+pokemonRepository.add({
+  name: "Charizard",
+  height: 5.07,
+  types: ["flame"],
+  id: 6,
+});
+pokemonRepository.add({
+  name: "Weedle",
+  height: 1.0,
+  types: ["bug", "poison"],
+  id: 13,
+});
 
 // console.log(pokemonRepository.findName(pokemonRepository.getAll(), 'Weedle'));
 

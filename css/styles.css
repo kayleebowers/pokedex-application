@@ -75,7 +75,7 @@ h2 {
 
 /* media queries */
 @media all and (max-width: 500px) {
-  .pokemon__name  {
+  .pokemon__name {
     font-size: 14px;
   }
 }
