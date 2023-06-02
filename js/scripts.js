@@ -57,10 +57,10 @@ let pokemonRepository = (function () {
   //get api info
   function loadList() {
     showLoadingMessage();
-    return fetch(apiUrl).then(function (response) {
+    return fetch(apiUrl).then(hideLoadingMessage())
+    .then(function (response) {
       return response.json(); 
-    }).then(hideLoadingMessage())
-    .then(function (json) {
+    }).then(function (json) {
       json.results.forEach(function(item) {
         let pokemon = {
           name: item.name,
@@ -68,7 +68,7 @@ let pokemonRepository = (function () {
         };
         add(pokemon);
       });
-    }).catch(hideLoadingMessage())
+    }).catch(hideLoadingMessage)
     .catch(function (e) {
       console.error(e);
     })
