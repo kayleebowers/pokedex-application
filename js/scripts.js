@@ -61,17 +61,17 @@ let pokemonRepository = (function () {
 
   //get api info
   function loadList() {
-    return fetch(apiUrl).then(function(response) {
+    return fetch(apiUrl).then(function (response) {
       return response.json(); 
-    }).then(function(json) {
-      return json.results.forEach(function(item) {
+    }).then(function (json) {
+      json.results.forEach(function(item) {
         let pokemon = {
           name: item.name,
           detailsUrl: item.url
         };
         add(pokemon);
       });
-    }).catch(function(e) {
+    }).catch(function (e) {
       console.error(e);
     })
   }
