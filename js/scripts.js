@@ -59,7 +59,8 @@ let pokemonRepository = (function () {
     showLoadingMessage();
     return fetch(apiUrl).then(function (response) {
       return response.json(); 
-    }).then(function (json) {
+    }).then(hideLoadingMessage())
+    .then(function (json) {
       json.results.forEach(function(item) {
         let pokemon = {
           name: item.name,
@@ -67,7 +68,8 @@ let pokemonRepository = (function () {
         };
         add(pokemon);
       });
-    }).catch(function (e) {
+    }).catch(hideLoadingMessage())
+    .catch(function (e) {
       console.error(e);
     })
   }
@@ -93,8 +95,12 @@ let pokemonRepository = (function () {
       console.log('Data is loading');
     })
   }
-  //loaded message function
 
+  //loaded message function
+  function hideLoadingMessage() {
+    removeEventListener("DOMContentLoaded", showLoadingMessage);
+    console.log('Data is ready');
+  }
 
   //attempts at bonus filter task
 
