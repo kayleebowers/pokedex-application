@@ -47,7 +47,9 @@ let pokemonRepository = (function () {
 
   //event handler
   function showDetails(pokemon) {
-    console.log(pokemon.name);
+    loadDetails(pokemon).then(function () {
+      console.log(pokemon.name);
+    });
   }
 
   //function to call button event listener
