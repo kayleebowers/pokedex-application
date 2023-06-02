@@ -57,7 +57,7 @@ let pokemonRepository = (function () {
     });
   }
 
-  //api functions
+  //get api info
   function loadList() {
     return fetch(apiUrl).then(function(response) {
       return response.json(); 
@@ -72,6 +72,20 @@ let pokemonRepository = (function () {
     }).catch(function(e) {
       console.error(e);
     })
+  }
+
+  //get pokemon details 
+  function loadDetails(item) {
+    let url = item.detailsUrl;
+    return fetch(url).then(function(response) {
+      return response.json();
+    }).then(function(details) {
+      item.imageUrl = details.sprites.front_default;
+      item.height = details.height;
+      item.types = details.types;
+    }).catch(function(e) {
+      console.error(e);
+    });
   }
 
   //attempts at bonus filter task
@@ -104,14 +118,15 @@ let pokemonRepository = (function () {
     add,
     addListItem,
     showDetails,
-    loadList
+    loadList,
+    loadDetails
     // findName
   };
 })();
 
 pokemonRepository.loadList().then(function() {
   //data is loaded
-  pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.getAll().forEach(function(pokemon) {
     pokemonRepository.addListItem(pokemon);
   });
 })
