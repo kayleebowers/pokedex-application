@@ -64,7 +64,7 @@ let pokemonRepository = (function () {
           name: item.name,
           detailsUrl: item.url
         };
-        addListItem(pokemon);
+        add(pokemon);
       });
     }).catch(function (e) {
       console.error(e);
