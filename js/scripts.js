@@ -98,8 +98,10 @@ let pokemonRepository = (function () {
 
   //loaded message function
   function hideLoadingMessage() {
-    removeEventListener("DOMContentLoaded", showLoadingMessage);
-    console.log('Data is ready');
+    if (showLoadingMessage) {
+      removeEventListener("DOMContentLoaded", showLoadingMessage);
+      console.log('Data is ready');
+    }
   }
 
   //attempts at bonus filter task
