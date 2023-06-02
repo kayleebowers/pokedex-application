@@ -42,8 +42,8 @@ let pokemonRepository = (function () {
 
   //event handler
   function showDetails(pokemon) {
-    loadDetails(pokemon).then(function () {
-      console.log(pokemon.name);
+    pokemonRepository.loadDetails(pokemon).then(function () {
+      console.log(pokemon);
     });
   }
 
