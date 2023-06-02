@@ -69,7 +69,7 @@ let pokemonRepository = (function () {
           name: item.name,
           detailsUrl: item.url
         };
-        add(pokemon);
+        addListItem(pokemon);
       });
     }).catch(function (e) {
       console.error(e);
@@ -79,7 +79,7 @@ let pokemonRepository = (function () {
   //get pokemon details 
   function loadDetails(item) {
     let url = item.detailsUrl;
-    return fetch(url).then(function(response) {
+    return fetch(url).then(function (response) {
       return response.json();
     }).then(function(details) {
       item.imageUrl = details.sprites.front_default;
