@@ -56,6 +56,7 @@ let pokemonRepository = (function () {
 
   //get api info
   function loadList() {
+    showLoadingMessage();
     return fetch(apiUrl).then(function (response) {
       return response.json(); 
     }).then(function (json) {
@@ -74,6 +75,7 @@ let pokemonRepository = (function () {
   //get pokemon details 
   function loadDetails(item) {
     let url = item.detailsUrl;
+    showLoadingMessage();
     return fetch(url).then(function (response) {
       return response.json();
     }).then(function(details) {
@@ -84,6 +86,15 @@ let pokemonRepository = (function () {
       console.error(e);
     });
   }
+
+  //loading message function
+  function showLoadingMessage() {
+    window.addEventListener("DOMContentLoaded", function () {
+      console.log('Data is loading');
+    })
+  }
+  //loaded message function
+
 
   //attempts at bonus filter task
 
@@ -116,7 +127,8 @@ let pokemonRepository = (function () {
     addListItem,
     showDetails,
     loadList,
-    loadDetails
+    loadDetails, 
+    showLoadingMessage
     // findName
   };
 })();
