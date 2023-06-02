@@ -12,13 +12,8 @@ let pokemonRepository = (function () {
 
   //add new pokemon to list
   function add(pokemon) {
-    if (typeof pokemon === "object" && Object.keys(pokemon).length === 4) {
+    if (typeof pokemon === "object" && "name" in pokemon) {
       pokemonList.push(pokemon);
-    } else if (
-      Object.keys(pokemon).length < 4 ||
-      Object.keys(pokemon).length > 4
-    ) {
-      return "Object needs name, height, types, id";
     } else {
       return "Not an object";
     }
