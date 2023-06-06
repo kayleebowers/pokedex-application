@@ -103,6 +103,7 @@ h2 {
   position: absolute;
   top: 0;
   right: 0;
+  background-color: lightgray;
 }
 
 .modal__photo {
@@ -115,16 +116,12 @@ h2 {
 }
 
 .modal__info {
-  width: 50%;
-  height: 90%;
-  border: 1px solid white;
-}
-
-.modal__info {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  width: 50%;
+  height: 90%;
 }
 
 .modal__info--name, .modal__info--height, .modal__info--types {
