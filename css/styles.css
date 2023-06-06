@@ -77,16 +77,21 @@ h2 {
 
 .modal {
   display: none;
-  position: relative;
 }
 
 .modal.visible {
   background-color: #CC0000;
-  width: 50%;
   height: 40vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 80vw;
+  text-align: center;
+  margin: 10px auto;
+  z-index: 10040;
+  overflow: auto;
+  padding: 30px 0px;
+  position: relative;
 }
 
 .modal__close {
