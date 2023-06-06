@@ -145,9 +145,17 @@ let pokemonRepository = (function () {
     //TO DO add modalContainer event listener to hide it when container is clicked
   }
 
+  //hide modal function
   function hideModal() {
     modalContainer.classList.remove('visible');
   }
+
+  //esc button event listener
+  window.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modalContainer.classList.contains('visible')) {
+      hideModal();
+    }
+  })
   
   //attempts at bonus loading messages
 
