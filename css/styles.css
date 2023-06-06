@@ -91,7 +91,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80vw;
+  width: 93.2vw;
   text-align: center;
   margin: 10px auto;
   z-index: 10040;
@@ -140,5 +140,15 @@ h2 {
 @media all and (max-width: 500px) {
   .pokemon__name {
     font-size: 14px;
+  }
+
+  .pokemon-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .pokemon-list {
+    grid-template-columns: 1fr 1fr;
   }
 }
