@@ -89,6 +89,21 @@ let pokemonRepository = (function () {
     });
   }
 
+  //add modalContainer as global IIFE variable
+  let modalContainer = document.querySelector('.modal');
+
+  // add showModal function
+  
+  function showModal(pokemon) {
+    //clear modals
+    modalContainer.innerHTML = '';
+
+    //create img element
+    let modalImage = document.createElement('img');
+    modalImage.classList.add(modal__photo);
+    modalImage.innerText = pokemonRepository.loadDetails(pokemon).pokemon.imageUrl;
+  }
+
   
   //attempts at bonus loading messages
 
