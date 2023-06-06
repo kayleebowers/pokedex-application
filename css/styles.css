@@ -152,3 +152,9 @@ h2 {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+@media all and (max-width: 750px) {
+  .modal.visible {
+    width: 90%;
+  }
+}
