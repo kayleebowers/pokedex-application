@@ -90,13 +90,17 @@ h2 {
   border: 1px solid white;
 }
 
-.modal__info--name {
-
+.modal__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.modal__info--height {
-
-} */ 
+.modal__info--name, .modal__info--height {
+  color: white;
+  padding: 10px;
+}
 
 /* media queries */
 @media all and (max-width: 500px) {
