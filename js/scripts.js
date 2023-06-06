@@ -112,6 +112,14 @@ let pokemonRepository = (function () {
     modalInfoName.classList.add('modal__info--name');
     modalInfoName.innerText = pokemonRepository.loadDetails(pokemon).name;
 
+    let modalInfoHeight = document.createElement('p');
+    modalInfoHeight.classList.add('modal__info--height');
+    modalInfoHeight.innerText = pokemonRepository.loadDetails(pokemon).height;
+
+    let modalInfoTypes = document.createElement('p');
+    modalInfoTypes.classList.add('modal__info--types');
+    modalInfoTypes.innerText = pokemonRepository.loadDetails(pokemon).types;
+    
   }
 
   
