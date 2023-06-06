@@ -99,6 +99,11 @@ let pokemonRepository = (function () {
     //clear modals
     modalContainer.innerHTML = '';
 
+    //create close button
+    let modalClose = document.createElement('button');
+    modalClose.classList.add('modal__close');
+    modalClose.innerText = 'Close';
+
     //create img element
     let modalImage = document.createElement('img');
     modalImage.classList.add('modal__photo');
@@ -127,6 +132,7 @@ let pokemonRepository = (function () {
     modalInfo.appendChild(modalInfoHeight);
     modalInfo.appendChild(modalInfoTypes);
 
+    modalContainer.appendChild(modalClose);
     modalContainer.appendChild(modalImage);
     modalContainer.appendChild(modalInfo);
 
