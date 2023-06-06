@@ -102,7 +102,8 @@ let pokemonRepository = (function () {
     //create img element
     let modalImage = document.createElement('img');
     modalImage.classList.add('modal__photo');
-    modalImage.innerText = imgUrl;
+    modalImage.src = imgUrl;
+    modalImage.alt = 'photo of pokemon'
 
     //create info div
     let modalInfo = document.createElement('div');
