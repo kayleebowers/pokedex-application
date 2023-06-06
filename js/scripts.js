@@ -43,7 +43,7 @@ let pokemonRepository = (function () {
   //event handler
   function showDetails(pokemon) {
     pokemonRepository.loadDetails(pokemon).then(function () {
-      showModal(pokemon.name, pokemon.imageUrl, `Height: ${pokemon.height}`, pokemon.types);
+      showModal(pokemon.name, pokemon.imageUrl, `Height: ${pokemon.height}`, `Types: ${pokemon.types}`);
     });
   }
 
@@ -89,7 +89,7 @@ let pokemonRepository = (function () {
       //get types from object in object array
       if (details.types.length >= 1) {
         for (let i = 0; i < details.types.length; i++) {
-          item.types = item.types + ' ' + details.types[i].type.name;
+          item.types = item.types + '  ' + details.types[i].type.name;
         }
        }
     }).catch(function(e) {
