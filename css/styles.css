@@ -76,6 +76,10 @@ h2 {
 /* modal styling */
 
 .modal {
+  display: none;
+}
+
+.modal.visible {
   background-color: #CC0000;
   width: 30%;
   height: 30vh;

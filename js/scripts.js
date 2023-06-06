@@ -127,6 +127,9 @@ let pokemonRepository = (function () {
 
     modalContainer.appendChild(modalImage);
     modalContainer.appendChild(modalInfo);
+
+    //make visible
+    modalContainer.classList.add('visible');
   }
 
   
