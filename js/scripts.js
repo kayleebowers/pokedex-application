@@ -84,7 +84,14 @@ let pokemonRepository = (function () {
     }).then(function(details) {
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
-      item.types = details.types;
+      item.types = '';
+
+      //get types from object in object array
+      if (details.types.length >= 1) {
+        for (let i = 0; i < details.types.length; i++) {
+          item.types = item.types + ' ' + details.types[i].type.name;
+        }
+       }
     }).catch(function(e) {
       console.error(e);
     });
