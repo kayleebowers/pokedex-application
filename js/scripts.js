@@ -93,34 +93,44 @@ let pokemonRepository = (function () {
   let modalContainer = document.querySelector('.modal');
 
   // add showModal function
-  
+
   function showModal(pokemon) {
     //clear modals
     modalContainer.innerHTML = '';
 
     //create img element
     let modalImage = document.createElement('img');
-    modalImage.classList.add(modal__photo);
-    modalImage.innerText = pokemonRepository.loadDetails(pokemon).pokemon.imageUrl;
+    modalImage.classList.add('modal__photo');
+    modalImage.innerText = pokemonRepository.showDetails(pokemon).imageUrl;
+
+    //create info div
+    let modalInfo = document.createElement('div');
+    modalInfo.classList.add('modal__info');
+
+    //create info div parts
+    let modalInfoName = document.createElement('h1');
+    modalInfoName.classList.add('modal__info--name');
+    modalInfoName.innerText = pokemonRepository.loadDetails(pokemon).name;
+
   }
 
   
   //attempts at bonus loading messages
 
-  // //loading message function
-  // function showLoadingMessage() {
-  //   window.addEventListener("DOMContentLoaded", function () {
-  //     console.log('Data is loading');
-  //   })
-  // }
+  //loading message function
+  function showLoadingMessage() {
+    window.addEventListener("DOMContentLoaded", function () {
+      console.log('Data is loading');
+    })
+  }
 
-  // //loaded message function
-  // function hideLoadingMessage() {
-  //   if (showLoadingMessage) {
-  //     removeEventListener("DOMContentLoaded", showLoadingMessage);
-  //     console.log('Data is ready');
-  //   }
-  // }
+  //loaded message function
+  function hideLoadingMessage() {
+    if (showLoadingMessage) {
+      removeEventListener("DOMContentLoaded", showLoadingMessage);
+      console.log('Data is ready');
+    }
+  }
 
   //attempts at bonus filter task
 
@@ -154,7 +164,9 @@ let pokemonRepository = (function () {
     showDetails,
     loadList,
     loadDetails, 
-    //showLoadingMessage
+    showModal,
+    showLoadingMessage, 
+    hideLoadingMessage
     // findName
   };
 })();
