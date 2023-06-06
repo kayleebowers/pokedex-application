@@ -142,7 +142,13 @@ let pokemonRepository = (function () {
     //make visible
     modalContainer.classList.add('visible');
 
-    //TO DO add modalContainer event listener to hide it when container is clicked
+    //close modal with outside click
+    modalContainer.addEventListener('click', function (e) {
+      let target = e.target;
+      if (target === modalContainer) {
+        hideModal();
+      }
+    });
   }
 
   //hide modal function
