@@ -147,21 +147,3 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.addListItem(pokemon);
   });
 })
-
-// console.log(pokemonRepository.findName(pokemonRepository.getAll(), 'Weedle'));
-
-
-//forEach loop before Exercise 1.6 (for earlier task reference)
-
-// pokemonRepository.getAll().forEach(function (pokemon) {
-//   if (pokemon.height < 3.07) {
-//     document.write(
-//       `<div class="pokemon"><h2 class="pokemon__name">${pokemon.name}</h2> <p class="pokemon__height">Height: ${pokemon.height}</p></div>`
-//     );
-//     //add note for biggest pokemon
-//   } else {
-//     document.write(
-//       `<div class="pokemon"><h2 class="pokemon__name">${pokemon.name}</h2> <p class="pokemon__height--big">Height: ${pokemon.height} — Wow, that's big!</p></div>`
-//     );
-//   }
-// });
