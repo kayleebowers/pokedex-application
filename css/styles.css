@@ -81,17 +81,13 @@ h2 {
   height: 30vh;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.modal__photo {
+.modal__photo, .modal__info {
   width: 50%;
   height: 90%;
   border: 1px solid white;
-  align-content: center;
-}
-
-/* .modal__info {
-
 }
 
 .modal__info--name {
