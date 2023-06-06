@@ -77,19 +77,31 @@ h2 {
 
 .modal {
   display: none;
+  position: relative;
 }
 
 .modal.visible {
   background-color: #CC0000;
   width: 50%;
-  height: 50vh;
+  height: 40vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.modal__close {
+  border: none;
+  padding: 10px;
+  text-align: center;
+  font-family: "Press Start 2P";
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .modal__photo {
-  width: 50%;
+  width: 40%;
   overflow: hidden;
 }
 
