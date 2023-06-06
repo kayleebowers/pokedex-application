@@ -134,6 +134,11 @@ let pokemonRepository = (function () {
     //TO DO add modalContainer event listener to hide it when container is clicked
   }
 
+  //make modal visible 
+  document.querySelector('.pokemonList__item').addEventListener('click', function() {
+    showModal(pokemon);
+  });
+
   
   //attempts at bonus loading messages
 
