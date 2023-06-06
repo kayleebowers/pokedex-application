@@ -145,11 +145,45 @@ h2 {
   .pokemon-list {
     grid-template-columns: 1fr;
   }
+
+  .modal.visible {
+    align-content: space-evenly;
+    width: 70%;
+  }
+  
+  .modal__photo {
+    height: 70%;
+  }
+
+  .modal__info {
+    width: 30%;
+    height: 70%;
+    font-size: 14px;
+    line-height: 12pt;
+  }
+
+  .modal__close {
+    font-size: 10px;
+  }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .pokemon-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .modal__photo {
+    height: 80%;
+  }
+
+  .modal__info {
+    width: 40%;
+    height: 80%;
+    font-size: 16px;
+  }
+
+  .modal__close {
+    font-size: 13px;
   }
 }
 
