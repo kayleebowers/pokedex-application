@@ -80,10 +80,10 @@ h2 {
 }
 
 .modal.visible {
-  background-color: #CC0000;
+  background-color: #3B4CCA;
   height: 40vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 80vw;
   text-align: center;
@@ -106,8 +106,12 @@ h2 {
 }
 
 .modal__photo {
-  width: 40%;
+  height: 100%;
   overflow: hidden;
+  background-color: #FFDE00;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 1px solid black;
 }
 
 .modal__info {
