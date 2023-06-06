@@ -73,6 +73,35 @@ h2 {
   cursor: pointer;
 }
 
+/* modal styling */
+
+.modal {
+  background-color: #CC0000;
+  width: 30%;
+  height: 30vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__photo {
+  width: 50%;
+  height: 90%;
+  border: 1px solid white;
+  align-content: center;
+}
+
+/* .modal__info {
+
+}
+
+.modal__info--name {
+
+}
+
+.modal__info--height {
+
+} */ 
+
 /* media queries */
 @media all and (max-width: 500px) {
   .pokemon__name {
