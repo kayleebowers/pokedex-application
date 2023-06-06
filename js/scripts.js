@@ -54,7 +54,7 @@ let pokemonRepository = (function () {
       showDetails(pokemon);
 
       //show modal when button is clicked
-      showModal(pokemon.name, pokemon.imgUrl, pokemon.height, pokemon.types);
+      showModal(pokemon.name, pokemon.imageUrl, pokemon.height, pokemon.types);
     });
   }
 
