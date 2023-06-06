@@ -113,6 +113,7 @@ h2 {
   border-radius: 50%;
   margin-right: 20px;
   border: 1px solid black;
+  align-self: center;
 }
 
 .modal__info {
