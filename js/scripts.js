@@ -89,20 +89,23 @@ let pokemonRepository = (function () {
     });
   }
 
-  //loading message function
-  function showLoadingMessage() {
-    window.addEventListener("DOMContentLoaded", function () {
-      console.log('Data is loading');
-    })
-  }
+  
+  //attempts at bonus loading messages
 
-  //loaded message function
-  function hideLoadingMessage() {
-    if (showLoadingMessage) {
-      removeEventListener("DOMContentLoaded", showLoadingMessage);
-      console.log('Data is ready');
-    }
-  }
+  // //loading message function
+  // function showLoadingMessage() {
+  //   window.addEventListener("DOMContentLoaded", function () {
+  //     console.log('Data is loading');
+  //   })
+  // }
+
+  // //loaded message function
+  // function hideLoadingMessage() {
+  //   if (showLoadingMessage) {
+  //     removeEventListener("DOMContentLoaded", showLoadingMessage);
+  //     console.log('Data is ready');
+  //   }
+  // }
 
   //attempts at bonus filter task
 
@@ -136,7 +139,7 @@ let pokemonRepository = (function () {
     showDetails,
     loadList,
     loadDetails, 
-    showLoadingMessage
+    //showLoadingMessage
     // findName
   };
 })();
