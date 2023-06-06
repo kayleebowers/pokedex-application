@@ -119,7 +119,14 @@ let pokemonRepository = (function () {
     let modalInfoTypes = document.createElement('p');
     modalInfoTypes.classList.add('modal__info--types');
     modalInfoTypes.innerText = pokemonRepository.loadDetails(pokemon).types;
-    
+
+    //append new sections
+    modalInfo.appendChild(modalInfoName);
+    modalInfo.appendChild(modalInfoHeight);
+    modalInfo.appendChild(modalInfoTypes);
+
+    modalContainer.appendChild(modalImage);
+    modalContainer.appendChild(modalInfo);
   }
 
   
