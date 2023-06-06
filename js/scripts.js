@@ -103,6 +103,9 @@ let pokemonRepository = (function () {
     let modalClose = document.createElement('button');
     modalClose.classList.add('modal__close');
     modalClose.innerText = 'Close';
+    modalClose.addEventListener('click', function () {
+      hideModal();
+    })
 
     //create img element
     let modalImage = document.createElement('img');
