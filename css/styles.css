@@ -81,14 +81,19 @@ h2 {
 
 .modal.visible {
   background-color: #CC0000;
-  width: 80%;
+  width: 50%;
   height: 50vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.modal__photo, .modal__info {
+.modal__photo {
+  width: 50%;
+  overflow: hidden;
+}
+
+.modal__info {
   width: 50%;
   height: 90%;
   border: 1px solid white;
