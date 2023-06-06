@@ -75,8 +75,10 @@ h2 {
   height: 100%;
 }
 
-.pokemon__name:hover {
+.pokemon__name:hover, .pokemonList__item:hover {
   cursor: pointer;
+  background-color: #CC0000;
+  color: white;
 }
 
 /* modal styling */
