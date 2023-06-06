@@ -93,8 +93,8 @@ let pokemonRepository = (function () {
   let modalContainer = document.querySelector('.modal');
 
   // add showModal function
-
   function showModal(pokemon) {
+
     //clear modals
     modalContainer.innerHTML = '';
 
@@ -130,6 +130,8 @@ let pokemonRepository = (function () {
 
     //make visible
     modalContainer.classList.add('visible');
+
+    //TO DO add modalContainer event listener to hide it when container is clicked
   }
 
   
