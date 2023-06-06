@@ -141,6 +141,10 @@ let pokemonRepository = (function () {
 
     //TO DO add modalContainer event listener to hide it when container is clicked
   }
+
+  function hideModal() {
+    modalContainer.classList.remove('visible');
+  }
   
   //attempts at bonus loading messages
 
@@ -193,7 +197,8 @@ let pokemonRepository = (function () {
     loadDetails, 
     showModal,
     showLoadingMessage, 
-    hideLoadingMessage
+    hideLoadingMessage, 
+    hideModal
     // findName
   };
 })();
