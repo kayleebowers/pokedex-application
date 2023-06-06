@@ -50,7 +50,11 @@ let pokemonRepository = (function () {
   //function to call button event listener
   function addButtonEventListener(button, pokemon) {
     button.addEventListener("click", function () {
+      //show details on page
       showDetails(pokemon);
+
+      //show modal when button is clicked
+      showModal(pokemon.name, pokemon.imgUrl, pokemon.height, pokemon.types);
     });
   }
 
@@ -93,7 +97,7 @@ let pokemonRepository = (function () {
   let modalContainer = document.querySelector('.modal');
 
   // add showModal function
-  function showModal(pokemon) {
+  function showModal(name, imgUrl, height, types) {
 
     //clear modals
     modalContainer.innerHTML = '';
@@ -101,7 +105,7 @@ let pokemonRepository = (function () {
     //create img element
     let modalImage = document.createElement('img');
     modalImage.classList.add('modal__photo');
-    modalImage.innerText = pokemonRepository.showDetails(pokemon).imageUrl;
+    modalImage.innerText = imgUrl;
 
     //create info div
     let modalInfo = document.createElement('div');
@@ -110,15 +114,15 @@ let pokemonRepository = (function () {
     //create info div parts
     let modalInfoName = document.createElement('h1');
     modalInfoName.classList.add('modal__info--name');
-    modalInfoName.innerText = pokemonRepository.loadDetails(pokemon).name;
+    modalInfoName.innerText = name;
 
     let modalInfoHeight = document.createElement('p');
     modalInfoHeight.classList.add('modal__info--height');
-    modalInfoHeight.innerText = pokemonRepository.loadDetails(pokemon).height;
+    modalInfoHeight.innerText = height;
 
     let modalInfoTypes = document.createElement('p');
     modalInfoTypes.classList.add('modal__info--types');
-    modalInfoTypes.innerText = pokemonRepository.loadDetails(pokemon).types;
+    modalInfoTypes.innerText = types;
 
     //append new sections
     modalInfo.appendChild(modalInfoName);
@@ -133,12 +137,6 @@ let pokemonRepository = (function () {
 
     //TO DO add modalContainer event listener to hide it when container is clicked
   }
-
-  //make modal visible 
-  document.querySelector('.pokemonList__item').addEventListener('click', function() {
-    showModal(pokemon);
-  });
-
   
   //attempts at bonus loading messages
 
