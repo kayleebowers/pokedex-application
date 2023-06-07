@@ -208,6 +208,14 @@ let pokemonRepository = (function () {
 
   document.querySelector('.search-bar__button').addEventListener("click", searchForInput);
 
+  //to do: get return/enter key to work for search bar
+  
+  // document.querySelector('.search-bar__button').addEventListener("keydown", function (e) {
+  //   if (e.key === 'Return') {
+  //     searchForInput();
+  //   }
+  // })
+
   //return value of IIFE
   return {
     getAll,
