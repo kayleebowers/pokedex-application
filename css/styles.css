@@ -38,13 +38,33 @@ header {
 
 /* main */
 
-h1 {
+h1, .search-bar {
   font-size: 24px;
   margin-left: 10px;
 }
 
 h2 {
   font-size: 18px;
+}
+
+/* search bar */
+
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.search-bar__input, .search-bar__button {
+  font: inherit;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.search-bar__button {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid black;
+  margin-left: 10px;
 }
 
 /* pokemon list */
@@ -75,7 +95,7 @@ h2 {
   height: 100%;
 }
 
-.pokemon__name:hover, .pokemonList__item:hover {
+.pokemon__name:hover, .pokemonList__item:hover, .search-bar__button {
   cursor: pointer;
   background-color: #CC0000;
   color: white;
