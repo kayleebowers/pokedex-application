@@ -187,29 +187,24 @@ let pokemonRepository = (function () {
     }
   }
 
-  //attempts at bonus filter task
+  //search for pokemon
+  let searchInput = document.querySelector('.search-bar__input');
+  let currentValue = searchInput.value;
 
-  // function findName(pokemon, name) {
-  //   pokemon.forEach(function(index) {
-  //     pokemon.filter(function (inputName) {
-  //       if (inputName === pokemon[index].name) {
-  //         console.log(inputName);
-  //       } else {
-  //         return 'Pokemon not found';
-  //       }
-  //     })
-  //   })
-  //   };
+  function getSearchInput() {
+    currentValue = searchInput.value;
+  }
 
-  // function findName(name) {
-  //   let results = pokemonList.filter(function(name) {
-  //     if (name === pokemonList.name) {
-  //       return name;
-  //   } else {
-  //     return 'Pokemon not found';
-  //   }
-  //   });
-  // }
+  searchInput.addEventListener("input", getSearchInput);
+
+  function searchForInput() {
+    currentValue = searchInput.value;
+    pokemonList.filter(function (pokemon) {
+      if (pokemon.name.toUpperCase() === currentValue.toUpperCase()) {
+        console.log(currentValue);
+      }
+    })
+  }
 
   //return value of IIFE
   return {
@@ -222,8 +217,9 @@ let pokemonRepository = (function () {
     showModal,
     showLoadingMessage, 
     hideLoadingMessage, 
-    hideModal
-    // findName
+    hideModal,
+    getSearchInput,
+    searchForInput
   };
 })();
 
