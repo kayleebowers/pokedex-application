@@ -206,6 +206,8 @@ let pokemonRepository = (function () {
     })
   }
 
+  document.querySelector('.search-bar__button').addEventListener("click", searchForInput);
+
   //return value of IIFE
   return {
     getAll,
