@@ -58,6 +58,7 @@ h2 {
   font: inherit;
   font-size: 12px;
   padding: 5px;
+  border-radius: 2%;
 }
 
 .search-bar__button {
