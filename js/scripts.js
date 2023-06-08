@@ -101,61 +101,74 @@ let pokemonRepository = (function () {
   let modalContainer = document.querySelector('.modal');
 
   // add showModal function
-  function showModal(name, imgUrl, height, types) {
+  function showModal(pokemon) {
+    //declare jQuery variables
+    let modalBody = $('.modal-body');
+    let modalTitle = $('.modal-title');
+    let modalHeader = $('.modal-header');
 
     //clear modals
-    modalContainer.innerHTML = '';
+    modalTitle.empty();
+    modalBody.empty();
 
-    //create close button
-    let modalClose = document.createElement('button');
-    modalClose.classList.add('modal__close');
-    modalClose.innerText = 'Close';
-    modalClose.addEventListener('click', function () {
-      hideModal();
-    })
+    //create content elements
+    let pokemonName = $("<h1>" + pokemon.name + "</h1>");
+    let pokemonImage = $("<img class='modal-image' width='50%'>");
+    pokemonImage.attr("src", pokemon.imgUrl);
+    let pokemonHeight = $("<p>" + "Height: " + pokemon.height + "</p>");
+    let pokemonTypes = $("<p>" + "Types: " + pokemon.types + "</p>");
+    //name, imgUrl, height, types
 
-    //create img element
-    let modalImage = document.createElement('img');
-    modalImage.classList.add('modal__photo');
-    modalImage.src = imgUrl;
-    modalImage.alt = 'photo of pokemon'
+    // //create close button
+    // let modalClose = document.createElement('button');
+    // modalClose.classList.add('modal__close');
+    // modalClose.innerText = 'Close';
+    // modalClose.addEventListener('click', function () {
+    //   hideModal();
+    // })
 
-    //create info div
-    let modalInfo = document.createElement('div');
-    modalInfo.classList.add('modal__info');
+    // //create img element
+    // let modalImage = document.createElement('img');
+    // modalImage.classList.add('modal__photo');
+    // modalImage.src = imgUrl;
+    // modalImage.alt = 'photo of pokemon'
 
-    //create info div parts
-    let modalInfoName = document.createElement('h1');
-    modalInfoName.classList.add('modal__info--name');
-    modalInfoName.innerText = name;
+    // //create info div
+    // let modalInfo = document.createElement('div');
+    // modalInfo.classList.add('modal__info');
 
-    let modalInfoHeight = document.createElement('p');
-    modalInfoHeight.classList.add('modal__info--height');
-    modalInfoHeight.innerText = height;
+    // //create info div parts
+    // let modalInfoName = document.createElement('h1');
+    // modalInfoName.classList.add('modal__info--name');
+    // modalInfoName.innerText = name;
 
-    let modalInfoTypes = document.createElement('p');
-    modalInfoTypes.classList.add('modal__info--types');
-    modalInfoTypes.innerText = types;
+    // let modalInfoHeight = document.createElement('p');
+    // modalInfoHeight.classList.add('modal__info--height');
+    // modalInfoHeight.innerText = height;
 
-    //append new sections
-    modalInfo.appendChild(modalInfoName);
-    modalInfo.appendChild(modalInfoHeight);
-    modalInfo.appendChild(modalInfoTypes);
+    // let modalInfoTypes = document.createElement('p');
+    // modalInfoTypes.classList.add('modal__info--types');
+    // modalInfoTypes.innerText = types;
 
-    modalContainer.appendChild(modalClose);
-    modalContainer.appendChild(modalImage);
-    modalContainer.appendChild(modalInfo);
+    // //append new sections
+    // modalInfo.appendChild(modalInfoName);
+    // modalInfo.appendChild(modalInfoHeight);
+    // modalInfo.appendChild(modalInfoTypes);
 
-    //make visible
-    modalContainer.classList.add('visible');
+    // modalContainer.appendChild(modalClose);
+    // modalContainer.appendChild(modalImage);
+    // modalContainer.appendChild(modalInfo);
 
-    //close modal with outside click
-    window.addEventListener('click', function (e) {
-      let target = e.target;
-      if (target !== modalContainer) {
-        hideModal();
-      }
-    });
+    // //make visible
+    // modalContainer.classList.add('visible');
+
+    // //close modal with outside click
+    // window.addEventListener('click', function (e) {
+    //   let target = e.target;
+    //   if (target !== modalContainer) {
+    //     hideModal();
+    //   }
+    // });
   }
 
   //hide modal function
