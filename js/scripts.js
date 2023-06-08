@@ -117,58 +117,12 @@ let pokemonRepository = (function () {
     pokemonImage.attr("src", pokemon.imgUrl);
     let pokemonHeight = $("<p>" + "Height: " + pokemon.height + "</p>");
     let pokemonTypes = $("<p>" + "Types: " + pokemon.types + "</p>");
-    //name, imgUrl, height, types
 
-    // //create close button
-    // let modalClose = document.createElement('button');
-    // modalClose.classList.add('modal__close');
-    // modalClose.innerText = 'Close';
-    // modalClose.addEventListener('click', function () {
-    //   hideModal();
-    // })
-
-    // //create img element
-    // let modalImage = document.createElement('img');
-    // modalImage.classList.add('modal__photo');
-    // modalImage.src = imgUrl;
-    // modalImage.alt = 'photo of pokemon'
-
-    // //create info div
-    // let modalInfo = document.createElement('div');
-    // modalInfo.classList.add('modal__info');
-
-    // //create info div parts
-    // let modalInfoName = document.createElement('h1');
-    // modalInfoName.classList.add('modal__info--name');
-    // modalInfoName.innerText = name;
-
-    // let modalInfoHeight = document.createElement('p');
-    // modalInfoHeight.classList.add('modal__info--height');
-    // modalInfoHeight.innerText = height;
-
-    // let modalInfoTypes = document.createElement('p');
-    // modalInfoTypes.classList.add('modal__info--types');
-    // modalInfoTypes.innerText = types;
-
-    // //append new sections
-    // modalInfo.appendChild(modalInfoName);
-    // modalInfo.appendChild(modalInfoHeight);
-    // modalInfo.appendChild(modalInfoTypes);
-
-    // modalContainer.appendChild(modalClose);
-    // modalContainer.appendChild(modalImage);
-    // modalContainer.appendChild(modalInfo);
-
-    // //make visible
-    // modalContainer.classList.add('visible');
-
-    // //close modal with outside click
-    // window.addEventListener('click', function (e) {
-    //   let target = e.target;
-    //   if (target !== modalContainer) {
-    //     hideModal();
-    //   }
-    // });
+    //append to modal
+    modalTitle.append(pokemonName);
+    modalBody.append(pokemonImage);
+    modalBody.append(pokemonHeight);
+    modalBody.append(pokemonTypes);
   }
 
   //hide modal function
