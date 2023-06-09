@@ -40,8 +40,9 @@ header {
 
 h1, .search-bar {
   font-size: 24px;
-  margin-left: 1%;
+  margin: 2%;
 }
+
 
 h2 {
   font-size: 18px;
@@ -50,7 +51,7 @@ h2 {
 /* search bar */
 
 .search-bar {
-  margin-bottom: 20px;
+  margin-bottom: 2%;
   display: flex;
 }
 
@@ -104,63 +105,50 @@ h2 {
 
 /* modal styling */
 
-.modal {
-  display: none;
+.modal-dialog {
+  height: 80vw;
 }
 
-.modal.visible {
+.modal-content {
   background-color: #3B4CCA;
-  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 93.2vw;
   text-align: center;
-  margin: 10px auto;
-  z-index: 10040;
   overflow: auto;
-  padding: 30px 0px;
-  position: relative;
 }
 
-.modal__close {
-  border: none;
-  padding: 10px;
-  text-align: center;
-  font-family: "Press Start 2P";
-  font-size: 16px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: lightgray;
+.btn-secondary {
+  background-color: #E8E8E8;
+  color: black;
 }
 
-.modal__photo {
-  height: 100%;
+.modal-img {
+  width: 50%;
   overflow: hidden;
   background-color: #FFDE00;
   border-radius: 50%;
-  margin-right: 20px;
   border: 1px solid black;
   align-self: center;
+  margin-bottom: 2%;
 }
 
-.modal__info {
+.modal-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 90%;
+  width: 100%;
+  color: white;
 }
 
-.modal__info--name, .modal__info--height, .modal__info--types {
+.modal-title, span {
   color: white;
-  padding: 10px;
+  float: right;
 }
 
 /* media queries */
-@media all and (max-width: 500px) {
+ @media all and (max-width: 500px) {
   .pokemon__name {
     font-size: 14px;
   }
@@ -168,50 +156,20 @@ h2 {
   .pokemon-list {
     grid-template-columns: 1fr;
   }
-
-  .modal.visible {
-    align-content: space-evenly;
-    width: 70%;
-  }
-  
-  .modal__photo {
-    height: 70%;
-  }
-
-  .modal__info {
-    width: 30%;
-    height: 70%;
-    font-size: 14px;
-    line-height: 12pt;
-  }
-
-  .modal__close {
-    font-size: 10px;
-  }
-}
+} 
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .pokemon-list {
     grid-template-columns: 1fr 1fr;
   }
-
-  .modal__photo {
-    height: 80%;
-  }
-
-  .modal__info {
-    width: 40%;
-    height: 80%;
-    font-size: 16px;
-  }
-
-  .modal__close {
-    font-size: 13px;
-  }
 }
 
 @media all and (max-width: 750px) {
-  .modal.visible {
-    width: 90%;
+  h1 {
+    text-align: center;
+  }
+
+  .search-bar {
+    justify-content: center;
   }
 }
