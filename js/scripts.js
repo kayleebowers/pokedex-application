@@ -172,6 +172,7 @@ let pokemonRepository = (function () {
     currentValue = searchInput.value;
     pokemonList.filter(function (pokemon) {
       if (pokemon.name.toUpperCase() === currentValue.toUpperCase()) {
+        $('#pokemonModal').modal('toggle');
         showDetails(pokemon);
       }
     })
