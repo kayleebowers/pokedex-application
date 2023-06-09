@@ -1,4 +1,4 @@
-/* * {
+* {
   box-sizing: border-box;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 /* header */
-/* header {
+header {
   height: 100px;
   width: 100%;
   background-color: #e8e8e8;
@@ -38,18 +38,18 @@ body {
 
 /* main */
 
-/* h1, .search-bar {
+h1, .search-bar {
   font-size: 24px;
   margin-left: 1%;
 }
 
 h2 {
   font-size: 18px;
-} */
+}
 
 /* search bar */
 
-/* .search-bar {
+.search-bar {
   margin-bottom: 20px;
   display: flex;
 }
@@ -66,11 +66,11 @@ h2 {
   padding-right: 10px;
   border: 1px solid black;
   margin-left: 10px;
-} */
+}
 
 /* pokemon list */
 
-/* .pokemon-list {
+.pokemon-list {
   list-style-type: none;
   padding-left: 0px;
   display: grid;
@@ -100,7 +100,7 @@ h2 {
   cursor: pointer;
   background-color: #CC0000;
   color: white;
-} */
+}
 
 /* modal styling */
 
