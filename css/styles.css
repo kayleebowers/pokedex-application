@@ -38,11 +38,11 @@ header {
 
 /* main */
 
-h1, .search-bar {
+h1,
+.search-bar {
   font-size: 24px;
   margin: 2%;
 }
-
 
 h2 {
   font-size: 18px;
@@ -55,7 +55,8 @@ h2 {
   display: flex;
 }
 
-.search-bar__input, .search-bar__button {
+.search-bar__input,
+.search-bar__button {
   font: inherit;
   font-size: 12px;
   padding: 5px;
@@ -97,9 +98,11 @@ h2 {
   height: 100%;
 }
 
-.pokemon__name:hover, .pokemonList__item:hover, .search-bar__button {
+.pokemon__name:hover,
+.pokemonList__item:hover,
+.search-bar__button {
   cursor: pointer;
-  background-color: #CC0000;
+  background-color: #cc0000;
   color: white;
 }
 
@@ -110,7 +113,7 @@ h2 {
 }
 
 .modal-content {
-  background-color: #3B4CCA;
+  background-color: #3b4cca;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,14 +122,14 @@ h2 {
 }
 
 .btn-secondary {
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
   color: black;
 }
 
 .modal-img {
   width: 50%;
   overflow: hidden;
-  background-color: #FFDE00;
+  background-color: #ffde00;
   border-radius: 50%;
   border: 1px solid black;
   align-self: center;
@@ -142,13 +145,14 @@ h2 {
   color: white;
 }
 
-.modal-title, span {
+.modal-title,
+span {
   color: white;
   float: right;
 }
 
 /* media queries */
- @media all and (max-width: 500px) {
+@media all and (max-width: 500px) {
   .pokemon__name {
     font-size: 14px;
   }
@@ -156,7 +160,7 @@ h2 {
   .pokemon-list {
     grid-template-columns: 1fr;
   }
-} 
+}
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .pokemon-list {
