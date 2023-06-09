@@ -40,8 +40,9 @@ header {
 
 h1, .search-bar {
   font-size: 24px;
-  margin-left: 1%;
+  margin: 2%;
 }
+
 
 h2 {
   font-size: 18px;
@@ -50,7 +51,7 @@ h2 {
 /* search bar */
 
 .search-bar {
-  margin-bottom: 20px;
+  margin-bottom: 2%;
   display: flex;
 }
 
