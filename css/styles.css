@@ -104,6 +104,10 @@ h2 {
 
 /* modal styling */
 
+.modal-dialog {
+  height: 80vw;
+}
+
 .modal-content {
   background-color: #3B4CCA;
   display: flex;
@@ -119,13 +123,10 @@ h2 {
   text-align: center;
   font-family: "Press Start 2P";
   font-size: 16px;
-  position: absolute;
-  top: 0;
-  right: 0;
   background-color: lightgray;
 }
 
-.modal__photo {
+.modal-img {
   height: 100%;
   overflow: hidden;
   background-color: #FFDE00;
@@ -135,19 +136,19 @@ h2 {
   align-self: center;
 }
 
-.modal__info {
+.modal-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 90%;
+  width: 100%;
+  color: white;
 }
 
-.modal__info--name, .modal__info--height, .modal__info--types {
+.modal-title, span {
   color: white;
-  padding: 10px;
-} */
+  float: right;
+}
 
 /* media queries */
 /* @media all and (max-width: 500px) {
