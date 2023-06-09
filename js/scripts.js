@@ -45,7 +45,7 @@ let pokemonRepository = (function () {
   //event handler
   function showDetails(pokemon) {
     pokemonRepository.loadDetails(pokemon).then(function () {
-      showModal(pokemon.name, pokemon.imageUrl, `Height: ${pokemon.height}`, `Types: ${pokemon.types}`);
+      showModal(pokemon);
     });
   }
 
@@ -100,7 +100,7 @@ let pokemonRepository = (function () {
   }
 
   //add modalContainer as IIFE variable
-  let modalContainer = document.querySelector('.modal');
+  let modalContainer = document.querySelector('#pokemonModal');
 
   // add showModal function
   function showModal(pokemon) {
