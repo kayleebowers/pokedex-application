@@ -118,23 +118,19 @@ h2 {
   overflow: auto;
 }
 
-.modal__close {
-  border: none;
-  padding: 10px;
-  text-align: center;
-  font-family: "Press Start 2P";
-  font-size: 16px;
-  background-color: lightgray;
+.btn-secondary {
+  background-color: #E8E8E8;
+  color: black;
 }
 
 .modal-img {
-  height: 100%;
+  width: 50%;
   overflow: hidden;
   background-color: #FFDE00;
   border-radius: 50%;
-  margin-right: 20px;
   border: 1px solid black;
   align-self: center;
+  margin-bottom: 2%;
 }
 
 .modal-body {
