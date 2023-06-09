@@ -30,7 +30,9 @@ let pokemonRepository = (function () {
     //add pokemon button
     let button = document.createElement("button");
     button.innerText = pokemon.name;
-    button.classList.add("pokemon__name");
+    button.classList.add("pokemon__name", "btn", "btn-primary");
+    button.setAttribute("data-toggle", "modal");
+    button.setAttribute("data-target", "#pokemonModal");
 
     //append new elements
     pokemonPageList.appendChild(pageListItem);
@@ -97,7 +99,7 @@ let pokemonRepository = (function () {
     });
   }
 
-  //add modalContainer as global IIFE variable
+  //add modalContainer as IIFE variable
   let modalContainer = document.querySelector('.modal');
 
   // add showModal function
