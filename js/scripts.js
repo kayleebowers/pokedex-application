@@ -115,8 +115,10 @@ let pokemonRepository = (function () {
 
     //create content elements
     let pokemonName = $("<h1>" + pokemon.name + "</h1>");
-    let pokemonImage = $("<img class='modal-image' width='50%'>");
-    pokemonImage.attr("src", pokemon.imgUrl);
+    let pokemonImage = $("<img>");
+    pokemonImage.attr("src", pokemon.imageUrl);
+    pokemonImage.attr("alt", "pokemon image");
+    pokemonImage.addClass("modal-img");
     let pokemonHeight = $("<p>" + "Height: " + pokemon.height + "</p>");
     let pokemonTypes = $("<p>" + "Types: " + pokemon.types + "</p>");
 
